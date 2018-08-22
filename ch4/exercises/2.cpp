@@ -1,4 +1,5 @@
-/* Taking input as series of type double values (as temperatures)
+/* 
+Taking input as series of type double values (as temperatures)
 and print the average and median values
 */
 #include <std_lib_facilities.h>
