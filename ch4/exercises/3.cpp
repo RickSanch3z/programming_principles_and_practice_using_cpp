@@ -1,3 +1,7 @@
+/*
+Take input as series of type double values (as distance between cities) 
+and print total distance, smallest and greatest distances, and the mean distance between all cities.
+*/
 #include <std_lib_facilities.h>
 
 // return total distance
