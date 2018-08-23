@@ -21,27 +21,27 @@ int main()
     for (int i = 0; i < 7; ++i) {
         if (min != max) { // if min and max are equal number is guessed. No need to ask for further questions
             if ((less_more % 2) == 0) {
-                cout << "Is the number you are thinking of less than " << ((max + min) / 2) << "?\n";
+                cout << "Is the number you are thinking of less than " << ((max + min) / 2 + (max + min) % 2) << "?\n";
                 cin >> answer;
                 less_more++;
 
                 if (answer == "y") {
-                    max = ((max + min) / 2) - 1;
+                    max = ((max + min) / 2 + (max + min) % 2) - 1;
                     min = min;
                 } else if (answer == "n") {
                     max = max;
-                    min = (max + min) / 2;
+                    min = (max + min) / 2 + (max + min) % 2;
                 }
             } else {
-                cout << "Is the number you are thinking of more than " << ((max + min) / 2) << "?\n";
+                cout << "Is the number you are thinking of more than " << ((max + min) / 2 + (max + min) % 2) << "?\n";
                 cin >> answer;
                 less_more++;
 
                 if (answer == "y") {
                     max = max;
-                    min = ((max + min) / 2) + 1;
+                    min = ((max + min) / 2 + (max + min) % 2) + 1;
                 } else if (answer == "n") {
-                    max = (max + min) / 2;
+                    max = (max + min) / 2 + (max + min) % 2;
                     min = min;
                 }
             }
