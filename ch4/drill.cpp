@@ -95,6 +95,6 @@ double conversion_to_meters(string unit)
     else if (unit == "ft")
         return ft_to_m;
     else
-        // is this function used with "check_unit" as a test before conversion, this selection should not be reached
+        // if this function used with "check_unit" as a test before conversion, this selection should not be reached
         return -std::numeric_limits<double>::max();
 }
