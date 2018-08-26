@@ -1,6 +1,6 @@
 /*
 Number guessing game.
-User input number between 1 and 100 and program use questions to find guessed number.
+User input number between 1 and 100 and program use questions to find the number.
 */
 #include <std_lib_facilities.h>
 
