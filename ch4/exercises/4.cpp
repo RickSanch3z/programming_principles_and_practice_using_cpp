@@ -1,6 +1,7 @@
 /*
 Number guessing game.
 User input number between 1 and 100 and program use questions to find the number.
+!!! does not behave as wanted (for bigger intervals and given tries: log2(n + 1), with n as interval) !!!
 */
 #include <std_lib_facilities.h>
 
@@ -8,7 +9,7 @@ int main()
 {
     int user_number = 0;
     int min = 1;
-    int max = 1000;
+    int max = 100;
     int less_more = 0; // used to alter questions: less or more?
     string answer = " ";
 
@@ -18,7 +19,7 @@ int main()
     cout << '\n';
     cout << "Answer with \"y\" to yes or \"n\" to no.\n";
 
-    for (int i = 0; i < 10; ++i) {
+    for (int i = 0; i < 7; ++i) {
         if ((max - min) != 1 && max != min) { // if they differ by one execute an alternative case
             if ((less_more % 2) == 0) {
                 cout << "Is the number you are thinking of less than " << ((min + max) / 2) << "?\n";
