@@ -8,7 +8,7 @@ int main()
 {
     int user_number = 0;
     int min = 1;
-    int max = 100;
+    int max = 1000;
     int less_more = 0; // used to alter questions: less or more?
     string answer = " ";
 
@@ -18,8 +18,8 @@ int main()
     cout << '\n';
     cout << "Answer with \"y\" to yes or \"n\" to no.\n";
 
-    for (int i = 0; i < 7; ++i) {
-        if ((max - min) > 1) { // if they differ by one or less (equal) execute an alternative case
+    for (int i = 0; i < 10; ++i) {
+        if ((max - min) != 1 && max != min) { // if they differ by one execute an alternative case
             if ((less_more % 2) == 0) {
                 cout << "Is the number you are thinking of less than " << ((min + max) / 2) << "?\n";
                 cin >> answer;
@@ -45,7 +45,7 @@ int main()
                     min = min;
                 }
             }
-        } else { // alternative case
+        } else if (max != min) { // alternative case
             cout << "Is the number you are thinking of more than " << min << "?\n";
             cin >> answer;
 
@@ -59,7 +59,7 @@ int main()
     if (min == max)
         cout << "Your number is: " << min << '\n';
     else
-        cout << "Sorry, I'm failed to guess.\n";
+        cout << "Sorry, I'm failed to guess. Your number was: " << user_number<< '\n';
 
     return 0;
 }
