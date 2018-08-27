@@ -19,32 +19,40 @@ int main()
     cout << "Answer with \"y\" to yes or \"n\" to no.\n";
 
     for (int i = 0; i < 7; ++i) {
-        if (min != max) { // if min and max are equal number is guessed. No need to ask for further questions
+        if ((max - min) > 1) { // if they differ by one or less (equal) execute an alternative case
             if ((less_more % 2) == 0) {
-                cout << "Is the number you are thinking of less than " << ((max + min) / 2 + (max + min) % 2) << "?\n";
+                cout << "Is the number you are thinking of less than " << ((min + max) / 2) << "?\n";
                 cin >> answer;
                 less_more++;
 
                 if (answer == "y") {
-                    max = ((max + min) / 2 + (max + min) % 2) - 1;
+                    max = (min + max) / 2 - 1;
                     min = min;
                 } else if (answer == "n") {
                     max = max;
-                    min = (max + min) / 2 + (max + min) % 2;
+                    min = (min + max) / 2;
                 }
             } else {
-                cout << "Is the number you are thinking of more than " << ((max + min) / 2 + (max + min) % 2) << "?\n";
+                cout << "Is the number you are thinking of more than " << ((min + max) / 2) << "?\n";
                 cin >> answer;
                 less_more++;
 
                 if (answer == "y") {
                     max = max;
-                    min = ((max + min) / 2 + (max + min) % 2) + 1;
+                    min = (min + max) / 2 + 1;
                 } else if (answer == "n") {
-                    max = (max + min) / 2 + (max + min) % 2;
+                    max = (min + max) / 2;
                     min = min;
                 }
             }
+        } else { // alternative case
+            cout << "Is the number you are thinking of more than " << min << "?\n";
+            cin >> answer;
+
+            if (answer == "y")
+                min = max;
+            else if (answer == "n")
+                max = min;
         }
     }
 
@@ -52,7 +60,6 @@ int main()
         cout << "Your number is: " << min << '\n';
     else
         cout << "Sorry, I'm failed to guess.\n";
-
 
     return 0;
 }
