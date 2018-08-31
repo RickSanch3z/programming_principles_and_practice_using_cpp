@@ -53,7 +53,7 @@ int main()
                 break;
             }
         } else {
-            cout << "Wrong operators.\n";
+            cout << "Wrong operands.\n";
         }
         cout << "Please enter two operands and operator separated by whitespace (op1 op2 operator).\n"
                 "Operands could be spelled digits or numbers between 0 and 9.\n"
