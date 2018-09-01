@@ -43,7 +43,7 @@ int main()
 bool is_prime(int val)
 {
     for (int i = 0; i < primes.size(); ++i) {
-        if ((val % primes[i]) == 0) // is tested value is divided without reminder by smaller primes then value is not a prime
+        if ((val % primes[i]) == 0) // if tested value is divided without reminder by smaller primes then value is not a prime
             return false;
     }
 
