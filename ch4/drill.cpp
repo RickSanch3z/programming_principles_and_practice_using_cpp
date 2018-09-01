@@ -1,6 +1,5 @@
 #include <std_lib_facilities.h>
 #include <vector>
-int disliked_words_test(string, vector<string>);
 
 // check passing unit string if valid unit present in string vector
 bool check_unit(string, vector<string>);
