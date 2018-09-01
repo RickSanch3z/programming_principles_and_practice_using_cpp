@@ -21,7 +21,7 @@ int main()
     n_var++;
 
     for (int i = 3; n_var < n; ++n_var) { // 0 and 1 is not primes, and 2 is already added
-        for (; !is_prime(i); ++i); // skip all non-primes
+        for (; !is_prime(i); ++i); // skip next non-primes
 
         primes.push_back(i++);
     }
