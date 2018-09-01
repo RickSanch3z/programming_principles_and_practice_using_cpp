@@ -20,7 +20,7 @@ int main()
 
     // compute median temperature:
     sort(temps); // sort temperatures
-    if ((temps.size() % 2) == 0) // check is size is even
+    if ((temps.size() % 2) == 0) // check if size is even
         cout << "Median temperature: " << ((temps[temps.size() / 2] + temps[temps.size() / 2 - 1]) / 2);
     else
         cout << "Median temperature: " << temps[temps.size() / 2] << '\n';
