@@ -24,8 +24,8 @@ int main()
 
     int p = 2;
 
-    // limit our main loop with p*p <= max, with p chanding in the main loop
-    // in the case of max 100 maximum prime tested here will be 11 and loop will stop
+    // limit our main loop with p*p <= max, with p changing in the main loop
+    // in the case of max=100 maximum prime tested here will be 11 and loop will stop
     // 11 * 11 > 100, 7 * 7 < 100 (7 * 14 = 98 < 100 in the inner for loop).
     // There is no need to test all primes from 1 to max. When we reach 11 * 11 > 100
     // that's mean we've already eliminated all non-primes from 1 to max.
