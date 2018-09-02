@@ -34,7 +34,7 @@ int main()
             cout << "x1: " << roots_vector[0].real() << '\n';
             cout << "x2: " << roots_vector[1].real() << '\n';
         } else {
-            cout << "Root of the quadratic equation are complex conjugate:\n";
+            cout << "Root of the quadratic equation are complex conjugates:\n";
             cout << "x1: " << roots_vector[0].real() << " + " << roots_vector[0].imag() << '\n';
             cout << "x2: " << roots_vector[1].real() << " + " << roots_vector[1].imag() << '\n';
         }
