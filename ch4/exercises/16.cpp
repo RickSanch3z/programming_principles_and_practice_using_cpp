@@ -1,5 +1,6 @@
 #include <std_lib_facilities.h>
 
+// get mode(s) from vector of strings
 vector<int> get_modes(vector<int>);
 
 int main()
@@ -61,6 +62,7 @@ vector<int> get_modes(vector<int> input_vector)
         i = j++;
     }
     
+    // check if we need to add the very last element in the case were every element is unique in the vector
     if (max_count == 1)
         return_vector.push_back(input_vector[input_vector.size() - 1]);
     
