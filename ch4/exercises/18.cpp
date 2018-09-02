@@ -6,6 +6,7 @@
 #include <std_lib_facilities.h>
 #include <complex>
 
+// find roots of quadratic equation given constants a, b, and c
 vector<complex<double>> roots(double, double, double);
 
 int main()
