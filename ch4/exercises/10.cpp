@@ -1,3 +1,7 @@
+/*
+* Rock, Scissors, Paper game with bot.
+*/
+
 #include <std_lib_facilities.h>
 
 // check is user input is correct. Also used to terminate the game
@@ -50,7 +54,7 @@ int main()
             else
                 bot_score++;
 
-            // announce both answer and score
+            // announce both answers and scores
             cout << "User input was: " << user_input << ". || Bot input was: " << bot_input << ".\n";
             cout << "Score is: User(" << user_score << "), Bot(" << bot_score << ").\n";
         } else {
